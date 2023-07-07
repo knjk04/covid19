@@ -26,5 +26,5 @@ jobs:
                 "test",
                 "ci",
                 "revert",
-                "merge",
+                "merge"
               ]
