@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from .models import Country, Source, Vaccine
 
 
@@ -20,5 +21,3 @@ class SourceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Source
         fields = ["name"]
-
-

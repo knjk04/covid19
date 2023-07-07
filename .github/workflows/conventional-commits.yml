@@ -18,7 +18,7 @@ jobs:
           valid-commit-types: >
               [
                 "chore",
-                "fix",        
+                "fix",
                 "feat",
                 "BREAKING CHANGE",
                 "docs",
