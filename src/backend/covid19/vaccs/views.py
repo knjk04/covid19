@@ -1,6 +1,4 @@
-import pandas as pd
 from django.db.utils import IntegrityError
-from django.http import HttpResponse
 from rest_framework import status, viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
