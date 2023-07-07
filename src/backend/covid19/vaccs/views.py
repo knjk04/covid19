@@ -7,6 +7,7 @@ from rest_framework.response import Response
 
 from .models import Country, Source
 from .serializers import CountrySerializer
+from .utils import get_locations_df
 
 
 class CountryViewSet(viewsets.ModelViewSet):
@@ -25,11 +26,3 @@ def ingest(request):
             print(f"{row.source_name} exists")
         print()
     return Response(status=status.HTTP_200_OK)
-
-
-def get_locations_df() -> pd.DataFrame:
-    df = pd.read_csv(
-        "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/locations.csv")
-    del df['iso_code']
-    del df["source_website"]
-    return df
