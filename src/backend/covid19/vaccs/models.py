@@ -1,5 +1,7 @@
 from django.db import models
 
+# Domain model for https://github.com/owid/covid-19-data/blob/master/public/data/vaccinations/locations.csv
+
 
 class Vaccine(models.Model):
     """
@@ -26,3 +28,6 @@ class Country(models.Model):
     last_updated = models.DateField()
     vaccine = models.ManyToManyField(Vaccine)
     source = models.OneToOneField(Source, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return f"{self.name}, Last updated: {self.last_updated}, Source: {self.source}"
