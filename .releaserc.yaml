@@ -1,3 +1,4 @@
+name: covid19
 branches:
   - name: main
   - name: alpha
