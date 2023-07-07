@@ -1,7 +1,13 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Country
+from .serializers import CountrySerializer
 
 
-# Create your views here.
 def index(request):
-    return HttpResponse("Hello, world. You are at the vaccs index.")
+    return HttpResponse(Country.objects.all())
+
+
+class CountryViewSet(viewsets.ModelViewSet):
+    queryset = Country.objects.all()
+    serializer_class = CountrySerializer
