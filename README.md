@@ -1,4 +1,4 @@
-To easily update database records, go to http://127.0.0.1:8000/admin/
+Displays a list of vaccinations available in different countries
 
 # Getting started locally
 
@@ -21,4 +21,4 @@ Running the app locally:
 
 To access the database via `http://127.0.0.1:8000/admin/`:
 1. Create a superuser: `python manage.py createsuperuser`
-1. Log in using the username and password you created
+1. Login using the username and password you created
