@@ -31,3 +31,7 @@ class Country(models.Model):
 
     def __str__(self):
         return f"{self.name}, Last updated: {self.last_updated}, Source: {self.source}"
+
+    class Meta:
+        # Fixes the issue of Django admin displaying "Countrys" as the plural
+        verbose_name_plural = "Countries"
