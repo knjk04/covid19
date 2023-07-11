@@ -3,8 +3,7 @@ To easily update database records, go to http://127.0.0.1:8000/admin/
 # Setup
 
 Prerequisites:
-- PostgreSQL
-- Docker engine and docker compose
+- Docker Desktop (macOS and Windows) / Docker engine and docker-compose (Linux)
 - Python 3
 
 Configure development environment:
@@ -13,7 +12,7 @@ Configure development environment:
 1. (Optional) run hook: `pre-commit run --all-files`
 
 
-
+1. Start Docker Desktop / the daemon
 1. While in the root directory of this project, run the database container: `docker compose up`
 1. Run `src/backend/covid19/init.sql` to create the database
 1. Move into the `covid19` directory: `cd src/backend/covid19`
