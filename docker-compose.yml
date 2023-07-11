@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  db:
+
+    image: postgres:15.3
+    restart: always
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpassword
+      POSTGRES_DB: covid19
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
